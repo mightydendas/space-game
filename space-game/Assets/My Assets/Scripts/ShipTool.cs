@@ -25,7 +25,7 @@ public class ShipTool : MonoBehaviour {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, tool.range);
             if (hit) {
                 if (hit.collider.tag == "Interactable") {
-                    Gizmos.DrawLine(transform.position, transform.up * tool.range);
+                    Gizmos.DrawLine(transform.position, Utils.Vector3(hit.point));
                 }
             }
         }
